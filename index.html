@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Dear Friend Abhilash 💖</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Elements -->
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="main-title">
+                <span class="heart">💖</span>
+                For My Dear Friend Abhilash
+                <span class="heart">💖</span>
+            </h1>
+            <p class="subtitle">Click around to discover secret messages! 🕵️</p>
+        </header>
+
+        <!-- Main Card -->
+        <div class="main-card" id="mainCard">
+            <div class="card-front" id="cardFront">
+                <div class="card-content">
+                    <div class="friend-icon">🤝</div>
+                    <h2>Hey Abhilash!</h2>
+                    <p>I have something special for you...</p>
+                    <button class="open-btn" onclick="openCard()">
+                        <i class="fas fa-heart"></i> Open Your Card
+                    </button>
+                </div>
+            </div>
+            
+            <div class="card-inside" id="cardInside">
+                <div class="inside-content">
+                    <h3>💝 To My Amazing Friend Abhilash 💝</h3>
+                    <div class="message">
+                        <p><strong>My Dear Friend Abhilash,</strong></p>
+                        <p>I have some messages for you, open down... 💝</p>
+                    </div>
+                    <div class="friendship-quote">
+                        <i class="fas fa-quote-left"></i>
+                        "A real friend is one who walks in when the rest of the world walks out."
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <button class="close-btn" onclick="closeCard()">
+                        <i class="fas fa-times"></i> Close
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Secret Message Areas -->
+        <div class="secret-areas">
+            <!-- Hidden Secret 1 -->
+            <div class="secret-message" id="secret1" onclick="revealSecret(1)">
+                <div class="secret-content">
+                    <h4>🤫 Secret Message #1</h4>
+                    <p>Click to discover the first secret! 🔍</p>
+                    <small>Hidden message waiting...</small>
+                </div>
+            </div>
+
+            <!-- Hidden Secret 2 -->
+            <div class="secret-message" id="secret2" onclick="revealSecret(2)">
+                <div class="secret-content">
+                    <h4>🤫 Secret Message #2</h4>
+                    <p>Another secret awaits! 🔍</p>
+                    <small>Find the first secret to unlock this one</small>
+                </div>
+            </div>
+
+            <!-- Hidden Secret 3 -->
+            <div class="secret-message" id="secret3" onclick="revealSecret(3)">
+                <div class="secret-content">
+                    <h4>🤫 Secret Message #3</h4>
+                    <p>More secrets to discover! 🔍</p>
+                    <small>Find previous secrets to unlock this one</small>
+                </div>
+            </div>
+
+            <!-- Hidden Secret 4 -->
+            <div class="secret-message" id="secret4" onclick="revealSecret(4)">
+                <div class="secret-content">
+                    <h4>🤫 Secret Message #4</h4>
+                    <p>Keep exploring! 🔍</p>
+                    <small>Find previous secrets to unlock this one</small>
+                </div>
+            </div>
+
+            <!-- Hidden Secret 5 -->
+            <div class="secret-message" id="secret5" onclick="revealSecret(5)">
+                <div class="secret-content">
+                    <h4>🤫 Secret Message #5</h4>
+                    <p>Almost there! 🔍</p>
+                    <small>Find previous secrets to unlock this one</small>
+                </div>
+            </div>
+
+            <!-- Hidden Secret 6 -->
+            <div class="secret-message" id="secret6" onclick="revealSecret(6)">
+                <div class="secret-content">
+                    <h4>🤫 Secret Message #6</h4>
+                    <p>The final secret! 🔍</p>
+                    <small>Find all previous secrets to unlock this one</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Elements -->
+        <div class="interactive-section">
+            <div class="friendship-stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="secretsFound">0</div>
+                    <div class="stat-label">Secrets Found</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="clicksCount">0</div>
+                    <div class="stat-label">Clicks Made</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="laughCount">0</div>
+                    <div class="stat-label">Times Laughed</div>
+                </div>
+            </div>
+
+            <div class="friendship-actions">
+                <button class="action-btn" onclick="sendVirtualHug()">
+                    <i class="fas fa-hands"></i> Send Virtual Hug
+                </button>
+                <button class="action-btn" onclick="playPrank()">
+                    <i class="fas fa-laugh"></i> Play Prank
+                </button>
+                <button class="action-btn" onclick="showFinalMessage()">
+                    <i class="fas fa-star"></i> Final Message
+                </button>
+            </div>
+        </div>
+
+        <!-- Hidden Easter Eggs -->
+        <div class="easter-eggs">
+            <div class="egg" id="egg1" onclick="triggerEasterEgg(1)">🥚</div>
+            <div class="egg" id="egg2" onclick="triggerEasterEgg(2)">🥚</div>
+            <div class="egg" id="egg3" onclick="triggerEasterEgg(3)">🥚</div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>Made with <i class="fas fa-heart"></i> for you, Abhilash!</p>
+                <div class="social-links">
+                    <button class="social-btn" onclick="shareCard()">
+                        <i class="fas fa-share"></i> Share This Card
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Secret Modal -->
+    <div class="secret-modal" id="secretModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeSecretModal()">&times;</span>
+            <h3 id="secretTitle">Secret Message</h3>
+            <div class="secret-modal-content" id="secretModalContent">
+                <p id="secretText">This is a secret message...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Message Modal -->
+    <div class="final-modal" id="finalModal">
+        <div class="final-content">
+            <h3>🎉 Congratulations Abhilash! 🎉</h3>
+            <p>You found all the secret messages!</p>
+            <p>You truly are my best friend and I'm so grateful for your friendship!</p>
+            <p>Thank you for being the amazing person you are! 💖</p>
+            <button class="final-btn" onclick="closeFinalModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
